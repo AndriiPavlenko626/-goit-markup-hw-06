@@ -1068,6 +1068,7 @@ color: #ffffff;
 
    /* modal window  */
 
+
    input:focus, textarea:focus, button:focus {
     outline: 2px solid #4d5ae5;
 }
@@ -1078,6 +1079,7 @@ color: #ffffff;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 999;
     background: rgba(46, 47, 66, 0.4);
     opacity: 0;
     visibility: hidden ;
@@ -1243,11 +1245,32 @@ color: #ffffff;
                 fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .input-checkbox:checked + .overlay-span {
-    background-color: #404bbf;
-   border-color: transparent;
-  }
   
+  .input-checkbox:checked + .text-checkbox .overlay-span {
+    background-color: #404bbf; 
+}
+
+.input-checkbox:checked + .text-checkbox .overlay-span .svg-icon {
+    display: block; 
+    fill: #fff; 
+}
+
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+
+
   .button-modal-overlay {
     border: none;
     display: block;
