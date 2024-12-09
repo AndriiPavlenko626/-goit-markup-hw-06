@@ -213,14 +213,16 @@ color: #2e2f42;
 
 
 /* mobile menu */
+
 .mobile-menu{
+  overflow-y: auto;
   z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -230,42 +232,19 @@ color: #2e2f42;
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-overlay.is-open,
+
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 .mobile-menu-container {
+  position: relative;
+ padding-top: 72px;
+ padding-bottom: 40px;
  display: flex;
  flex-direction: column;
- justify-content: center;
- padding:16px;
-}
-.mobile-menu-list {
-  margin-bottom: auto;
-}
-.mobile-menu-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  width: 320px;
-  padding: 0;
-}
-.color {
-  color: #404bbf;
-}
-.current::after {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
+ height: 100%;
 }
 
 .mobile-menu-close {
@@ -283,6 +262,36 @@ color: #2e2f42;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.mobile-navigation {
+  margin-bottom: auto;
+}
+
+.mobile-menu-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  width: 100%;
+  max-width: 320px;
+  padding: 0;
+}
+.color {
+  color: #404bbf;
+}
+.current::after {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
 .mobile-menu-list {
   font-size: 36px;
   font-weight: 700;
@@ -295,10 +304,10 @@ color: #2e2f42;
 }
 
 .adrress-menu {
-margin-bottom: 48px;
-}
+  margin-bottom: 48px;
+  }
 
-.adrress-menu-link:focus,
+  .adrress-menu-link:focus,
 .adrress-menu-link:hover {
   color: #404bbf;
 }
@@ -314,26 +323,6 @@ margin-bottom: 48px;
 {
   background-color: #404bbf;
   border: none;
-}
-
-.adrress-menu {
-  margin-top: 48px;
-}
-
-.mobile-menu-list {
-display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 168px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  font-style: normal;
-}
-
-.mobile-menu-list .mobile-menu-item:first-child {
-  margin-top: 72px;
 }
 
 .mobile-menu-close:hover svg,
@@ -352,16 +341,13 @@ display: flex;
 
 }
 
-.adrress-menu-item{
-  margin-top: 24px;
-}
-
 .social-list {
   display: flex;
   gap: 40px;
   justify-content: space-between;
   margin: 0;
 }
+
 .social-menu-link {
   width: 100%;
   height: 100%;
@@ -376,13 +362,15 @@ display: flex;
   fill: #fff;
 }
 
+.mobile-menu-list {
+  margin-bottom: auto;
+}
 
   @media screen and (min-width: 768px) {
     .mobile-menu{
-      direction: none;
+      display: none;
     }
   }
-
   /* Hero section 1 */
 
   
@@ -825,6 +813,7 @@ cursor: pointer;
  .footer{
   background-color: #2e2f42;
    padding: 96px 0;
+  
  }
  .container-foot{
  display: flex;
@@ -938,7 +927,6 @@ color: #ffffff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   color: #ffffff;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   opacity: 0.3;
 }
 .input-email::placeholder {
@@ -977,7 +965,7 @@ color: #ffffff;
     row-gap: 72px;
     align-items: baseline;
     justify-content: flex-start;
-    padding-left: 108px;
+    padding-left: 0 108px;
   }
   
 
@@ -1010,7 +998,7 @@ color: #ffffff;
     flex-direction: row;
     align-items: baseline;
     padding: 0 15px;
-    gap: 0;
+    
   }
   .footer-logo{
     margin-right: 120px;
@@ -1018,12 +1006,10 @@ color: #ffffff;
 
   .footer-social {
     gap:0;
-    margin-bottom: 16px;
     margin-right: 80px;
   }
   .footer-socil-title{
     margin-top: 0;
-    margin-bottom: 16px;
   }
 
   
@@ -1046,9 +1032,10 @@ color: #ffffff;
 
   .button-icons {
     fill: #fff;
-    margin-left: 16px;
+  
   }
 }
+
 
    /* modal window  */
 
